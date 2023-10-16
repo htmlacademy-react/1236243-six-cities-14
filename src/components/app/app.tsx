@@ -1,12 +1,13 @@
 import MainScreen from '../../pages/main-page/main';
 
 type AppPlacesCards = {
-    placesCards: number;
+    placesCardsCount: number;
 }
 
-function App ({placesCards}: AppPlacesCards): JSX.Element {
+
+function App ({placesCardsCount}: AppPlacesCards): JSX.Element {
   return (
-    <MainScreen placesCount={placesCards}/>
+    <MainScreen placesCount={placesCardsCount}/>
   );
 }
 
