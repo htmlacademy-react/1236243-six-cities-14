@@ -1,11 +1,11 @@
-import { Comment } from '../types/review-type';
+import { CommentType } from '../types/review-type';
 
 const AVATAR_URL = 'https://i.pravatar.cc/58';
 
-export const reviews: Comment[] = [
+export const reviews: CommentType[] = [
   {
     comment: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
-    date: 'Sat Oct 21 2023 20:04:54 GMT+0300 (Москва, стандартное время)',
+    date: '2023-10-02T09:23:20.316Z',
     id: 1,
     rating: 2,
     user: {
@@ -16,7 +16,7 @@ export const reviews: Comment[] = [
     }},
   {
     comment: 'A quiet  a a river by the unique lightness of Amsterdam.',
-    date: 'Sat Oct 22 2023 20:04:54 GMT+0300 (Москва, стандартное время)',
+    date: '2023-10-02T09:23:20.316Z',
     id: 2,
     rating: 5,
     user: {
@@ -27,7 +27,7 @@ export const reviews: Comment[] = [
     }},
   {
     comment: 'A quiet cozy and picturesque by the unique lightness of Amsterdam.',
-    date: 'Sat Oct 23 2023 20:04:54 GMT+0300 (Москва, стандартное время)',
+    date: '2023-10-02T09:23:20.316Z',
     id: 3,
     rating: 3,
     user: {
@@ -38,7 +38,7 @@ export const reviews: Comment[] = [
     }},
   {
     comment: 'A quiet cozy  a river by the unique lightness of Amsterdam.',
-    date: 'Sat Oct 27 2023 20:04:54 GMT+0300 (Москва, стандартное время)',
+    date: '2023-10-02T09:23:20.316Z',
     id: 4,
     rating: 4,
     user: {
@@ -49,7 +49,7 @@ export const reviews: Comment[] = [
     }},
   {
     comment: 'A quiet cozy and picturesque that hides behind ',
-    date: 'Sat Oct 24 2023 20:04:54 GMT+0300 (Москва, стандартное время)',
+    date: '2023-10-02T09:23:20.316Z',
     id: 5,
     rating: 1,
     user: {
