@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-//import PlaceCard from '../../components/place-card/place-card';
 import Header from '../../components/header/header';
 import { CityLocations, SortBy} from '../../const';
 import { OfferType } from '../../types/offer-type';
@@ -60,7 +59,7 @@ function MainScreen ({placesCount, propsOffers}: PlacesProps): JSX.Element {
                 </ul>
               </form>
               <div className="cities__places-list places__list tabs__content">
-                <ListOffers propsOffer={offersAll} />
+                <ListOffers propsOffer={offersAll}/>
               </div>
             </section>
             <div className="cities__right-section">

@@ -1,19 +1,16 @@
-
 import { CommentType } from '../../types/review-type';
-import { calculateRating, formatDateComment } from '../../utils';
-
+import { calculateRating, formatDateComment} from '../../utils';
 
 type ReviewType = {
     reviewsProp: CommentType[];
 }
 
 export default function Reviews({reviewsProp}: ReviewType) {
-
   return (
     <>
       <h2 className="reviews__title">Reviews · <span className="reviews__amount">{reviewsProp.length}</span></h2>
       <ul className="reviews__list">
-        {reviewsProp.map(({rating, id, user, comment, date}) =>
+        {reviewsProp.slice(0, 10).map(({rating, id, user, comment, date}) =>
           (
             <li className="reviews__item" key={id}>
               <div className="reviews__user user">

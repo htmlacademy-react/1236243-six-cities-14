@@ -16,8 +16,7 @@ type OfferScreenType = {
 function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
   const {id} = useParams();
 
-  const [{image, isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods}] = propsOffers.filter((item) => item.id.toString() === id);
-
+  const [{image, isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description}] = propsOffers.filter((item) => item.id.toString() === id);
 
   return (
     <div className="page">
@@ -67,7 +66,7 @@ function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
                   {bedrooms} Bedrooms
                 </li>
                 <li className="offer__feature offer__feature--adults">
-              Max {maxAdults} adults
+              Max {maxAdults} {maxAdults > 1 ? 'adults' : 'adult'}
                 </li>
               </ul>
               <div className="offer__price">
@@ -86,25 +85,18 @@ function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
                   <div className="offer__avatar-wrapper offer__avatar-wrapper--pro user__avatar-wrapper">
                     <img
                       className="offer__avatar user__avatar"
-                      src="img/avatar-angelina.jpg"
+                      src={host.avatarUrl}
                       width={74}
                       height={74}
                       alt="Host avatar"
                     />
                   </div>
-                  <span className="offer__user-name">Angelina</span>
-                  <span className="offer__user-status">Pro</span>
+                  <span className="offer__user-name">{host.name}</span>
+                  <span className="offer__user-status">{host.isPro ? 'Pro' : ''}</span>
                 </div>
                 <div className="offer__description">
                   <p className="offer__text">
-                A quiet cozy and picturesque that hides behind a a river by the
-                unique lightness of Amsterdam. The building is green and from
-                18th century.
-                  </p>
-                  <p className="offer__text">
-                An independent House, strategically located between Rembrand
-                Square and National Opera, but where the bustle of the city
-                comes to rest in this alley flowery and colorful.
+                    {description}
                   </p>
                 </div>
               </div>

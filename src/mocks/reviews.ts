@@ -5,7 +5,7 @@ const AVATAR_URL = 'https://i.pravatar.cc/58';
 export const reviews: CommentType[] = [
   {
     comment: 'A quiet cozy and picturesque that hides behind a a river by the unique lightness of Amsterdam.',
-    date: '2023-10-02T09:23:20.316Z',
+    date: '2023-03-02T09:23:20.316Z',
     id: 1,
     rating: 2,
     user: {
@@ -16,7 +16,7 @@ export const reviews: CommentType[] = [
     }},
   {
     comment: 'A quiet  a a river by the unique lightness of Amsterdam.',
-    date: '2023-10-02T09:23:20.316Z',
+    date: '2023-07-02T09:23:20.316Z',
     id: 2,
     rating: 5,
     user: {
@@ -27,7 +27,7 @@ export const reviews: CommentType[] = [
     }},
   {
     comment: 'A quiet cozy and picturesque by the unique lightness of Amsterdam.',
-    date: '2023-10-02T09:23:20.316Z',
+    date: '2023-08-02T09:23:20.316Z',
     id: 3,
     rating: 3,
     user: {
@@ -49,7 +49,7 @@ export const reviews: CommentType[] = [
     }},
   {
     comment: 'A quiet cozy and picturesque that hides behind ',
-    date: '2023-10-02T09:23:20.316Z',
+    date: '2023-11-02T09:23:20.316Z',
     id: 5,
     rating: 1,
     user: {
