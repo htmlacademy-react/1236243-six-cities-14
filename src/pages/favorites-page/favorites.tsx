@@ -48,8 +48,7 @@ function FavoritesPage({propsOffers}: FavoritesOffers): JSX.Element {
                     </div>
                   </div>
                   <div className="favorites__places">
-                    {citiesArr.favoriteOffers.filter((item) => item.city?.name === city)
-                      .map((item) =><FavoriteComponent favOffer={item} key={item.id}/>)}
+                    {citiesArr.favoriteOffers.filter((item) => item.city?.name === city).map((item) =><FavoriteComponent favOffer={item} key={item.id}/>)}
                   </div>
                 </li>
               ))}
