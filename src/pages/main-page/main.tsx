@@ -81,7 +81,7 @@ function MainScreen ({propsOffers}: PlacesProps): JSX.Element {
               </div>
             </section>
             <div className="cities__right-section">
-              <Map city={checkedCityCoordinates} offers={filteredOffers} selectedOffer={selectedOffer}/>
+              <Map city={checkedCityCoordinates} offers={filteredOffers} selectedOffer={selectedOffer} blockMap={'cities'}/>
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { calculateRating } from '../../utils';
 import ReviewForm from '../../components/review-form/review-form';
 import Reviews from '../../components/reviews/reviews';
+import Map from '../../components/map/map';
 
 
 type OfferScreenType = {
@@ -16,7 +17,7 @@ type OfferScreenType = {
 function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
   const {id} = useParams();
 
-  const [{image, isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description}] = propsOffers.filter((item) => item.id.toString() === id);
+  const [{image, isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description, city}] = propsOffers.filter((item) => item.id.toString() === id);
 
   return (
     <div className="page">
@@ -107,7 +108,7 @@ function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
 
             </div>
           </div>
-          <section className="offer__map map" />
+          <Map city={city} offers={propsOffers} blockMap={'offer'} />
         </section>
         <div className="container">
           <section className="near-places places">
