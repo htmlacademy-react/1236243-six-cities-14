@@ -6,9 +6,10 @@ const calculateRating = (rating: number, stars: number = RATING_STARS) => Math.r
 
 const formatDateComment = (date: string) => dayjs(date).format('MMMM YYYY');
 
-function sortDay (fieldName: string) {
-
-  return (a:CommentType, b:CommentType): number => dayjs(a[fieldName]) < dayjs(b[fieldName]) ? 1 : -1;
+function sortDay (a:CommentType, b:CommentType) {
+  const date1 = dayjs(a.date);
+  const date2 = dayjs(b.date);
+  return date2.diff(date1);
 }
 
 export {calculateRating, formatDateComment, sortDay};

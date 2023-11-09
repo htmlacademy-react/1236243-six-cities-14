@@ -21,6 +21,15 @@ function MainScreen ({propsOffers}: PlacesProps): JSX.Element {
 
   const checkedCityCoordinates = filteredOffers[0].city;
 
+  const defaultCity = {
+    location: {
+      latitude: 52.23,
+      longitude: 4.54,
+      zoom: 10
+    },
+    name: 'Amsterdam'
+  };
+
   const [selectedOffer, setSelectedOffer] = useState<OfferType | null>(null);
 
   function handleOfferSelected (offerId: number) {
@@ -81,7 +90,7 @@ function MainScreen ({propsOffers}: PlacesProps): JSX.Element {
               </div>
             </section>
             <div className="cities__right-section">
-              <Map city={checkedCityCoordinates} offers={filteredOffers} selectedOffer={selectedOffer} blockMap={'cities'}/>
+              <Map city={checkedCityCoordinates || defaultCity} offers={filteredOffers} selectedOffer={selectedOffer} blockMap={'cities'}/>
             </div>
           </div>
         </div>

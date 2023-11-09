@@ -19,6 +19,15 @@ function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
 
   const [{image, isPremium, title, isFavorite, rating, type, bedrooms, maxAdults, price, goods, host, description, city}] = propsOffers.filter((item) => item.id.toString() === id);
 
+  const defaultCity = {
+    location: {
+      latitude: 52.23,
+      longitude: 4.54,
+      zoom: 10
+    },
+    name: 'Amsterdam'
+  };
+
   return (
     <div className="page">
       <Helmet>
@@ -108,7 +117,7 @@ function Offer ({propsOffers, propsReview}: OfferScreenType): JSX.Element {
 
             </div>
           </div>
-          <Map city={city} offers={propsOffers} blockMap={'offer'} />
+          <Map city={city || defaultCity} offers={propsOffers} blockMap={'offer'} />
         </section>
         <div className="container">
           <section className="near-places places">
