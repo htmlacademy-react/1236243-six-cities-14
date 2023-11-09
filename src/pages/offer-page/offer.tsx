@@ -17,9 +17,10 @@ type OfferScreenType = {
   defaultCity: City;
   onOfferHover: (id: number)=> void;
   onOfferLeave: ()=> void;
+  selectedOffer: OfferType | null;
 }
 
-function Offer ({propsOffers, propsReview, defaultCity, onOfferHover, onOfferLeave}: OfferScreenType): JSX.Element {
+function Offer ({propsOffers, propsReview, defaultCity, onOfferHover, onOfferLeave, selectedOffer}: OfferScreenType): JSX.Element {
   const {id} = useParams();
   const [offerId, setHoverOfferId] = useState<number | null>(null);
 
@@ -127,7 +128,7 @@ function Offer ({propsOffers, propsReview, defaultCity, onOfferHover, onOfferLea
 
             </div>
           </div>
-          <Map city={city || defaultCity} offers={propsOffers} blockMap={'offer'}/>
+          <Map city={city || defaultCity} offers={propsOffers} blockMap={'offer'} selectedOffer={selectedOffer}/>
         </section>
         <div className="container">
           <section className="near-places places">
