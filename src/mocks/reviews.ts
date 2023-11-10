@@ -49,7 +49,7 @@ export const reviews: CommentType[] = [
     }},
   {
     comment: 'A quiet cozy and picturesque that hides behind ',
-    date: '2023-11-02T09:23:20.316Z',
+    date: '2023-01-02T09:23:20.316Z',
     id: 5,
     rating: 1,
     user: {
