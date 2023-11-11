@@ -4,7 +4,7 @@ import { calculateRating } from '../../utils';
 
 type CardPlace = {
   offer: OfferType;
-  onCardHover: () => void;
+  onCardHover?: () => void;
   onOfferMouseLeave?: () => void;
   block: string;
 }
