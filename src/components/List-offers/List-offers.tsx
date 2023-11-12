@@ -8,7 +8,6 @@ export type ListCardsComponents = {
     propsOffer: OfferType[];
     onOfferHover: (id: number) => void;
     onOfferLeave: () => void;
-
 }
 
 export default function ListOffers({ propsOffer, onOfferHover, onOfferLeave}: ListCardsComponents) {
