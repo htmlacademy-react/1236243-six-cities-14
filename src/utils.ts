@@ -23,6 +23,8 @@ function sortingByOption (offers: OfferType[], activeSort: string) {
       return offers;
     case SortBy.TopRated:
       return offers.toSorted((OfferA: OfferType, OfferB: OfferType) => OfferB.rating - OfferA.rating);
+    default:
+      return offers;
   }
 }
 
