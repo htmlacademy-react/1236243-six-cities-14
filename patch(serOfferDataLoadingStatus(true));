@@ -1,0 +1,235 @@
+[33mcommit 0200b539faa36c341110633c290b3e835d6230fa[m[33m ([m[1;36mHEAD -> [m[1;32mmodule7-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Thu Nov 16 15:53:34 2023 +0300
+
+    Connection to the server
+
+[33mcommit 94e89d0356ea3a1cb3869a8560db14993cc6830c[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 0e40eb5 7080866
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Tue Nov 14 21:52:32 2023 +0300
+
+    Merge pull request #8 from Iakovlev-Dev/module6-task2
+
+[33mcommit 7080866dedfa695ecaa187ffaad9f7e0c6511964[m[33m ([m[1;31morigin/module6-task2[m[33m, [m[1;32mmodule6-task2[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Tue Nov 14 21:51:48 2023 +0300
+
+    add sorting fix 1.4
+
+[33mcommit a3f1da17edac53e71d4642ad70a780fd7aa71098[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Mon Nov 13 21:52:52 2023 +0300
+
+    add sorting fix 1.3
+
+[33mcommit fbffe956fa77b0e8d8818ea33de72c7c8f9815d3[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Nov 12 19:11:38 2023 +0300
+
+    add sorting fix 1.2
+
+[33mcommit 5e9fd5c1fcd358a3b40da9c43ec68402482b0e3f[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Nov 12 19:08:51 2023 +0300
+
+    add sorting fix 1.1
+
+[33mcommit ab51c493c72d6323f5455289196a411a60c39a68[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Nov 12 19:01:04 2023 +0300
+
+    add sorting
+
+[33mcommit 0e40eb50c5145cbe9a680fe0fda78e9f06c17a92[m
+Merge: 687033f 8dfdb83
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Sun Nov 12 15:44:17 2023 +0300
+
+    Merge pull request #7 from Iakovlev-Dev/module6-task1
+
+[33mcommit 8dfdb8376f6bc1988873a7320fcedffed23c516f[m[33m ([m[1;31morigin/module6-task1[m[33m, [m[1;32mmodule6-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Nov 12 15:27:31 2023 +0300
+
+    add store fix
+
+[33mcommit 8737f4b8bd08a8cfedeff24bd6bcfe2646cc4607[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Nov 12 15:24:20 2023 +0300
+
+    add store
+
+[33mcommit 81e524d1a7f01f8b7a987fc876243abf4539bc60[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sat Nov 11 22:35:47 2023 +0300
+
+    add dispatch in app
+
+[33mcommit 8f41d702681ac25ae5eb424c36ffc3a06bc24fed[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sat Nov 11 15:10:16 2023 +0300
+
+    fix map offer
+
+[33mcommit 7b01bec90e601473d8fc36bf5d2a75c2fc91bd25[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sat Nov 11 13:51:37 2023 +0300
+
+    add store
+
+[33mcommit 687033f97449e2b54ecc9bef9b16985db14527e0[m
+Merge: d85f002 6ea2453
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Fri Nov 10 22:28:18 2023 +0300
+
+    Merge pull request #6 from Iakovlev-Dev/module5-task2
+
+[33mcommit 6ea24539a1586ab3b6dc041f0c0a124e6bc50a50[m[33m ([m[1;31morigin/module5-task2[m[33m, [m[1;32mmodule5-task2[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Fri Nov 10 22:26:39 2023 +0300
+
+    add map to offer fix v1.2
+
+[33mcommit 224f2701c3c435d4ce1799d27af5dc6fc33bebe4[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Thu Nov 9 21:52:01 2023 +0300
+
+    add map to offer fix
+
+[33mcommit 0a996d0b81f1963225a1556b31ece62758ce082f[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Thu Nov 9 21:48:43 2023 +0300
+
+    add map to offer
+
+[33mcommit 66d2a53b00d7c36e22d13cb8fa8e9f0fd5d1abd4[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Thu Nov 9 20:51:51 2023 +0300
+
+    add reviews and map in offer fix v1.3
+
+[33mcommit 2b2c0260b261b9d03e96c5f187b06573abfc318f[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Thu Nov 9 20:49:08 2023 +0300
+
+    add reviews and map in offer fix v1.2
+
+[33mcommit 24dcbe57617f53158f6f0de9c67fe5361f234728[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Tue Nov 7 22:59:13 2023 +0300
+
+    add reviews and map in offer fix
+
+[33mcommit c5bbdccfa1b2eece696f75063ee9111772a4eea3[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Tue Nov 7 22:56:38 2023 +0300
+
+    add reviews and map in offer
+
+[33mcommit d85f0024b35fae493cf846de8a017ac060b86590[m
+Merge: 7c77dd5 1b73a17
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Mon Nov 6 20:54:25 2023 +0300
+
+    Merge pull request #5 from Iakovlev-Dev/module5-task1
+
+[33mcommit 1b73a170262a9292ba567fa155dcf6943154dd22[m[33m ([m[1;31morigin/module5-task1[m[33m, [m[1;32mmodule5-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Mon Nov 6 20:53:43 2023 +0300
+
+    add map v1.2
+
+[33mcommit 573f9d6b1dba6c4370d0bd6339b8158100adc444[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Nov 5 23:47:50 2023 +0300
+
+    add map
+
+[33mcommit 7c77dd539437427f8e7153533694776f85235a7b[m
+Merge: ec086dc 095d3ba
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Thu Nov 2 20:56:35 2023 +0300
+
+    Merge pull request #4 from Iakovlev-Dev/module4-task1
+
+[33mcommit 095d3badd61bd28d74fa6bc0887243bc784a46b0[m[33m ([m[1;31morigin/module4-task1[m[33m, [m[1;32mmodule4-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Thu Nov 2 20:49:27 2023 +0300
+
+    add useState fix
+
+[33mcommit 895699fac34b02673f500b64b0f4767e16281dff[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Oct 29 22:59:29 2023 +0300
+
+    add useState
+
+[33mcommit 88e81aae3b26caa70078483b4e2b7e70e00fee6b[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sat Oct 28 14:14:12 2023 +0300
+
+    Favorite-Page
+
+[33mcommit d47aa18c9dc25293d2ff130c92e10f9083ef21c6[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Wed Oct 25 15:18:08 2023 +0300
+
+    RenderCards and review
+
+[33mcommit 1aea3a3a08568a454e637d53839dc4827c0f258d[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Oct 22 17:07:28 2023 +0300
+
+    RenderCards
+
+[33mcommit ec086dcb40631faa556b40f01f0cdab32b4ee99a[m[33m ([m[1;31mupstream/master[m[33m, [m[1;31mupstream/HEAD[m[33m)[m
+Merge: 07fc6b0 617cded
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Thu Oct 19 10:32:46 2023 +0300
+
+    Merge pull request #3 from Iakovlev-Dev/module3-task1
+
+[33mcommit 617cdedd06f510f3d5bfe5dc338142bd8a212174[m[33m ([m[1;31morigin/module3-task1[m[33m, [m[1;32mmodule3-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Wed Oct 18 23:27:43 2023 +0300
+
+    Routing
+
+[33mcommit 07fc6b0be933638693e8f88b11165ecf95edb246[m
+Merge: ef53e56 729a221
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Tue Oct 17 05:50:32 2023 +0300
+
+    Merge pull request #2 from Iakovlev-Dev/module2-task1
+
+[33mcommit 729a221e77efa92a14dcb383debca3f1c8051350[m[33m ([m[1;31morigin/module2-task1[m[33m, [m[1;32mmodule2-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Mon Oct 16 23:01:28 2023 +0300
+
+    Pages v1.2
+
+[33mcommit 7d48c11d7f0321844d9491c0b1b05a1915c824fc[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Sun Oct 15 21:23:50 2023 +0300
+
+    Pages
+
+[33mcommit ef53e56a397b5c7cbf7ca18525d9c0313a8cc8b3[m
+Merge: f8c3947 56ffa03
+Author: Unknown Keks <keksobot@users.noreply.github.com>
+Date:   Tue Oct 10 22:07:44 2023 +0300
+
+    Merge pull request #1 from Iakovlev-Dev/module1-task1
+
+[33mcommit 56ffa035cb89f92556c54ede3e3f5a3fa4ba1389[m[33m ([m[1;31morigin/module1-task1[m[33m, [m[1;32mmodule1-task1[m[33m)[m
+Author: Iakovlev Igor <iakovlev.igor.dev@gmail.com>
+Date:   Tue Oct 10 21:54:11 2023 +0300
+
+    Добавил наставника
+
+[33mcommit f8c39473494db92c250487dc2f95f49153201b2c[m
+Author: Keks <keks@htmlacademy.ru>
+Date:   Tue Oct 10 21:43:17 2023 +0300
+
+    :hatching_chick:
