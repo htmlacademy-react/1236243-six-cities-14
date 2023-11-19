@@ -1,8 +1,10 @@
 import { logoutAction } from '../../store/api-actions';
-import { useAppDispatch } from '../../store/hooks';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
 
 export default function AuthUser () {
   const dispatch = useAppDispatch();
+  const user = useAppSelector((state)=> state.user);
+  const countFavorites = useAppSelector((state) => state.countFavoritesOffer);
 
   const logOutHandle = () => {
     dispatch(logoutAction());
@@ -17,9 +19,9 @@ export default function AuthUser () {
         >
           <div className="header__avatar-wrapper user__avatar-wrapper"></div>
           <span className="header__user-name user__name">
-                          Oliver.conner@gmail.com
+            {user?.email}
           </span>
-          <span className="header__favorite-count">3</span>
+          <span className="header__favorite-count">{countFavorites}</span>
         </a>
       </li>
       <li className="header__nav-item">
