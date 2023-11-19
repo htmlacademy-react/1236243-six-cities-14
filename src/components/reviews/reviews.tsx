@@ -2,16 +2,16 @@ import { CommentType } from '../../types/review-type';
 import { calculateRating, formatDateComment, sortDayComment} from '../../utils';
 
 type ReviewType = {
-    reviewsProp: CommentType[];
+    reviewsProp: CommentType[] | null;
 }
 
 export default function Reviews({reviewsProp}: ReviewType) {
-
+ 
   const sortReview = [...reviewsProp].sort(sortDayComment);
 
   return (
     <>
-      <h2 className="reviews__title">Reviews · <span className="reviews__amount">{reviewsProp.length}</span></h2>
+      <h2 className="reviews__title">Reviews · <span className="reviews__amount">{sortReview.length}</span></h2>
       <ul className="reviews__list">
         {sortReview.slice(0, 10).map(({rating, id, user, comment, date}) =>
           (
