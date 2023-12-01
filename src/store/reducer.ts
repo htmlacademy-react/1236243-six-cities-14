@@ -1,5 +1,4 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { addComment, changeCity, changeSorting, dropOffer, loadNearOffer, loadOffers, requireAuthorization, setOfferDataLoadingStatus, updateOffers } from './action';
 import { OfferType } from '../types/offer-type';
 import { CommentType } from '../types/review-type';
 import { AuthorizationStatus, SortBy } from '../const';
@@ -21,7 +20,7 @@ type initialState = {
     comment: CommentData | null;
 }
 
-export const initialState: initialState = {
+const initialState: initialState = {
   selectedCity: 'Paris',
   offers: [],
   activeSort: SortBy.Popular,

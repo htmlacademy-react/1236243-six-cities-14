@@ -47,7 +47,7 @@ export default function ReviewForm({idComment}: ReviewForm) {
             <input
               className="form__rating-input visually-hidden"
               name="rating"
-              value={item.toString()}
+              value={item}
               id={`${item}-stars`}
               type="radio"
               onChange={handleChangeRating}
