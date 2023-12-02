@@ -17,12 +17,10 @@ type ApiAction = {
   extra: AxiosInstance;
 }
 
-export const fetchOffersAction = createAsyncThunk<void, undefined, ApiAction>('data/fetchOffers',
-  async (_arg, {dispatch, extra: api}) => {
-    dispatch(setOfferDataLoadingStatus(true));
+export const fetchOffersAction = createAsyncThunk<OfferType[], undefined, ApiAction>('data/fetchOffers',
+  async (_arg, { extra: api }) => {
     const {data} = await api.get<OfferType[]>(APIRoute.Offers);
-    dispatch(setOfferDataLoadingStatus(false));
-    dispatch(loadOffers(data));
+    return data;
   });
 
 export const checkAuthAction = createAsyncThunk<void, undefined, ApiAction>('user/checkAuth',
@@ -67,9 +65,9 @@ export const fetchReview = createAsyncThunk<CommentType[], OfferType['id'], ApiA
   }
 );
 
-export const sendFormComment = createAsyncThunk<void, CommentData, ApiAction >('data/sendFormComment',
-  async ({idComment, comment, rating}, {dispatch, extra: api}) => {
+export const sendFormComment = createAsyncThunk<CommentData, CommentData, ApiAction >('data/sendFormComment',
+  async ({idComment, comment, rating}, { extra: api }) => {
     const {data} = await api.post<CommentData>(`${APIRoute.Comments}/${idComment}`, {comment, rating});
-    dispatch(addComment(data));
+    return data;
   }
 );

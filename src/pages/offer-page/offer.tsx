@@ -10,8 +10,8 @@ import PlaceCard from '../../components/place-card/place-card';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { useEffect } from 'react';
 import { fetchNearOffer, fetchOffer, fetchReview } from '../../store/api-actions';
-import { dropOffer } from '../../store/action';
 import { AuthorizationStatus } from '../../const';
+import { setOffers } from '../../store/data-process/data-process';
 
 const MAX_OFFER_NEAR = 3;
 
@@ -23,11 +23,11 @@ function Offer ({ defaultCity }: OfferScreenType) {
   const dispatch = useAppDispatch();
   const offerId = useParams();
 
-  const currentOffer = useAppSelector((state) => state.offer);
-  const offers = useAppSelector((state) => state.offers);
-  const reviews = useAppSelector((state) => state.comments);
-  const nearOffer = useAppSelector((state) => state.nearByOffer);
-  const authUser = useAppSelector((state) => state.authorizationStatus);
+  const currentOffer = useAppSelector((state) => state.DATA.currentOffer);
+  const offers = useAppSelector((state) => state.DATA.offers);
+  const reviews = useAppSelector((state) => state.DATA.comments);
+  const nearOffer = useAppSelector((state) => state.DATA.nearByOffer);
+  const authUser = useAppSelector((state) => state.USER.authorizationStatus);
   const nearOfferRendering = nearOffer?.slice(0, MAX_OFFER_NEAR);
 
   //console.log(reviews);
@@ -39,7 +39,7 @@ function Offer ({ defaultCity }: OfferScreenType) {
     }
 
     return () => {
-      dispatch(dropOffer());
+      dispatch(setOffers([]));
     };
   }, [offerId, dispatch]);
 
