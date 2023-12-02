@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 import { DEFAULT_CITY, NameSpace, SortBy } from '../../const';
 import { DataProcess } from '../../types/state';
-import { fetchNearOffer, fetchOffer, fetchOffersAction, fetchReview } from '../api-actions';
+import { fetchOffersAction } from '../api-actions';
 import { OfferType } from '../../types/offer-type';
 
 
@@ -10,9 +10,6 @@ const initialState: DataProcess = {
   selectedCity: DEFAULT_CITY,
   loadingStatus: false,
   activeSort: SortBy.Popular,
-  nearByOffer: null,
-  currentOffer: null,
-  comments: null
 };
 
 export const dataProcess = createSlice({
@@ -41,15 +38,6 @@ export const dataProcess = createSlice({
       })
       .addCase(fetchOffersAction.rejected, (state) => {
         state.loadingStatus = false;
-      })
-      .addCase(fetchNearOffer.fulfilled, (state, action) => {
-        state.nearByOffer = action.payload;
-      })
-      .addCase(fetchOffer.fulfilled, (state, action) => {
-        state.currentOffer = action.payload;
-      })
-      .addCase(fetchReview.fulfilled, (state, action) => {
-        state.comments = action.payload;
       });
   }
 });

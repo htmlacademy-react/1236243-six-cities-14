@@ -9,7 +9,9 @@ import { UserData } from '../types/user-data';
 import { dropToken, saveToken } from '../services/token';
 import { CommentType } from '../types/review-type';
 import { CommentData } from '../types/comment-data';
+import { createAPI } from '../services/api';
 
+const MAX_OFFER_NEAR = 3;
 
 type ApiAction = {
   dispatch: AppDispatch;
@@ -44,26 +46,20 @@ export const logoutAction = createAsyncThunk<void, undefined, ApiAction>('user/l
     dropToken();
   });
 
-export const fetchOffer = createAsyncThunk<OfferType, OfferType['id'], ApiAction>('data/fetchOffer',
-  async (offerId, {extra: api}) => {
-    const {data} = await api.get<OfferType>(`${APIRoute.Offers}/${offerId}`);
-    return data;
+export const fetchOfferById = async function (offerId: string) {
+  const api = createAPI();
+  const offerById = await api.get<OfferType>(`${APIRoute.Offers}/${offerId}`);
+  if(offerById.status) {
+    const nearOffers = await api.get<OfferType[]>(`${APIRoute.Offers}/${offerId}/nearby`);
+    const reviews = await api.get<CommentType[]>(`${APIRoute.Comments}/${offerId}`);
+    return {
+      offer: offerById.data,
+      nearOffers: nearOffers.data.slice(0, MAX_OFFER_NEAR),
+      reviews: reviews.data
+    };
   }
-);
-
-export const fetchNearOffer = createAsyncThunk<OfferType[], OfferType['id'], ApiAction>('data/fetchNearOffer',
-  async (offerId, { extra: api }) => {
-    const {data} = await api.get<OfferType[]>(`${APIRoute.Offers}/${offerId}/nearby`);
-    return data;
-  }
-);
-
-export const fetchReview = createAsyncThunk<CommentType[], OfferType['id'], ApiAction>('data/fetchReview',
-  async (offerId, {extra: api}) => {
-    const {data} = await api.get<CommentType[]>(`${APIRoute.Comments}/${offerId}`);
-    return data;
-  }
-);
+  return null;
+};
 
 export const sendFormComment = createAsyncThunk<CommentData, CommentData, ApiAction >('data/sendFormComment',
   async ({idComment, comment, rating}, { extra: api }) => {
