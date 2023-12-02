@@ -7,12 +7,13 @@ import ReviewForm from '../../components/review-form/review-form';
 import Reviews from '../../components/reviews/reviews';
 import Map from '../../components/map/map';
 import PlaceCard from '../../components/place-card/place-card';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { useAppSelector } from '../../store/hooks';
 import { useEffect, useState } from 'react';
-import { fetchOfferById, fetchOffersAction } from '../../store/api-actions';
+import { fetchOfferById } from '../../store/api-actions';
 import { AuthorizationStatus } from '../../const';
-import { setOffers } from '../../store/data-process/data-process';
 import { CommentType } from '../../types/review-type';
+import { AxiosError } from 'axios';
+import NotFoundPage from '../not-found-pages/not-found-pages';
 
 type OfferScreenType = {
   defaultCity: City;
@@ -25,22 +26,13 @@ type CurrentOfferType = {
 };
 
 function Offer ({ defaultCity }: OfferScreenType) {
-  const dispatch = useAppDispatch();
   const offerId = useParams();
 
   const offers = useAppSelector((state) => state.DATA.offers);
   const authUser = useAppSelector((state) => state.USER.authorizationStatus);
 
   const [currentOffer, setCurrentOffer] = useState<CurrentOfferType | null>(null);
-
-  console.log(currentOffer);
-  
-  useEffect(() => {
-    dispatch(fetchOffersAction());
-    return () => {
-      dispatch(setOffers([]));
-    };
-  }, [dispatch]);
+  const [isNotFound, setIsNotFound] = useState(false);
 
   useEffect(() => {
     if(offerId.id) {
@@ -48,13 +40,22 @@ function Offer ({ defaultCity }: OfferScreenType) {
         if(offerCurrent) {
           setCurrentOffer(offerCurrent);
         }
+      }).catch((response: AxiosError<{message:string}>) => {
+        if (response.response?.status === 404) {
+          setIsNotFound(true);
+        }
       });
     }
     return () => {
       setCurrentOffer(null);
     };
-  });
+  }, [offerId]);
 
+  if(isNotFound) {
+    return (
+      <NotFoundPage />
+    );
+  }
   return (
     <div className="page">
       <Helmet>
