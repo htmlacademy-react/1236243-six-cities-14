@@ -8,7 +8,6 @@ import { AuthData } from '../types/auth-data';
 import { UserData } from '../types/user-data';
 import { dropToken, saveToken } from '../services/token';
 import { CommentType } from '../types/review-type';
-import { CommentData } from '../types/comment-data';
 import { createAPI } from '../services/api';
 import { ReviewDataSentType } from '../components/review-form/review-form';
 
@@ -64,7 +63,7 @@ export const fetchOfferById = async function (offerId: string) {
 
 export const sendCommentForm = async function (idComment: string, review: ReviewDataSentType) {
   const api = createAPI();
-  const {data} = await api.post<CommentData>(`${APIRoute.Comments}/${idComment}`, review);
+  const {data} = await api.post<CommentType>(`${APIRoute.Comments}/${idComment}`, review);
 
   return data;
 };
