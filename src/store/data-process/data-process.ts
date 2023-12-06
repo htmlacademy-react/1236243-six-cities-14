@@ -25,7 +25,7 @@ export const dataProcess = createSlice({
     changeSorting(state, action: PayloadAction<string>) {
       state.activeSort = action.payload;
     },
-    setFaovoriteStatus(state, action: PayloadAction<{offerId: string; status: boolean}>) {
+    setFavoriteStatus(state, action: PayloadAction<{offerId: string; status: boolean}>) {
       const updateOffers: OfferType[] = [];
       state.offers.forEach((item) => {
         if (item.id === action.payload.offerId) {
@@ -52,4 +52,4 @@ export const dataProcess = createSlice({
   }
 });
 
-export const { setOffers, setCityName, changeSorting, setFaovoriteStatus } = dataProcess.actions;
+export const { setOffers, setCityName, changeSorting, setFavoriteStatus } = dataProcess.actions;

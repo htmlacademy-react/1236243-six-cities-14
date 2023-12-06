@@ -6,7 +6,7 @@ import { IsSelectUserAuth } from '../../store/user-process/selectors';
 import { AppRoute } from '../../const';
 import { useState } from 'react';
 import { postfavoriteStatus } from '../../store/api-actions';
-import { setFaovoriteStatus } from '../../store/data-process/data-process';
+import { setFavoriteStatus } from '../../store/data-process/data-process';
 
 type CardPlace = {
   offer: OfferType;
@@ -21,16 +21,16 @@ function PlaceCard ({offer, onCardHover, onOfferMouseLeave, block} : CardPlace) 
   const {price, isFavorite, type, previewImage, isPremium, title, rating, id} = offer;
   const pathCard = `/offer/${id}`;
   const dispatch = useAppDispatch();
-  const offerId = offer.id;
+
   const [status, setStatus] = useState<boolean>(isFavorite);
   const isAuthUser = useAppSelector(IsSelectUserAuth);
   const navigate = useNavigate();
 
   const handleClickFavorite = () => {
     if(isAuthUser) {
-      postfavoriteStatus(offerId, !status).then((item: OfferType) => {
+      postfavoriteStatus(id, !status).then((item: OfferType) => {
         setStatus(item.isFavorite);
-        dispatch(setFaovoriteStatus({offerId, status: item.isFavorite}));
+        dispatch(setFavoriteStatus({offerId: id, status: item.isFavorite}));
       });
     } else {
       navigate(AppRoute.Login);
