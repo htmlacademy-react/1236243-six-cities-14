@@ -1,9 +1,9 @@
 import { AppRoute, AuthorizationStatus} from '../../const';
-import FavoritesPage from '../../pages/favorites-page/favorites';
-import Login from '../../pages/login-page/login';
-import MainScreen from '../../pages/main-page/main';
+import FavoritesPage from '../../pages/favorites-page/favorites-page';
+import Login from '../../pages/login-page/login-page';
+import MainScreen from '../../pages/main-page/main-page';
 import { Route, Routes } from 'react-router-dom';
-import Offer from '../../pages/offer-page/offer';
+import Offer from '../../pages/offer-page/offer-page';
 import NotFoundPage from '../../pages/not-found-pages/not-found-pages';
 import PrivateRoute from '../private-route/private-route';
 import { HelmetProvider } from 'react-helmet-async';
