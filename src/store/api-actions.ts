@@ -10,6 +10,7 @@ import { dropToken, saveToken } from '../services/token';
 import { CommentType } from '../types/review-type';
 import { createAPI } from '../services/api';
 import { ReviewDataSentType } from '../components/review-form/review-form';
+import { CurrentOfferType } from '../pages/offer-page/offer-page';
 
 const MAX_OFFER_NEAR = 3;
 
@@ -56,7 +57,7 @@ export const fetchOfferById = async function (offerId: string) {
       offer: offerById.data,
       nearOffers: nearOffers.data.slice(0, MAX_OFFER_NEAR),
       reviews: reviews.data
-    };
+    } as CurrentOfferType;
   }
   return null;
 };
