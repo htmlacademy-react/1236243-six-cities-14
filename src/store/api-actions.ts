@@ -74,4 +74,3 @@ export const postfavoriteStatus = async function (offerId: string, status: boole
   const {data} = await api.post<OfferType>(`${APIRoute.Favorite}/${offerId}/${Number(status)}`);
   return data;
 };
-
